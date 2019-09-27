@@ -1,0 +1,41 @@
+#logo-navbar {
+	width: 104px;
+}
+
+#hero {
+	right: 157px;
+    position: relative;
+    width: 435px;
+}
+
+.btn-primary:hover {
+	color: #3d511e;
+    background-color: #f8f9fa;
+    border-color: #3d511e;
+    box-shadow: 5px 10px 10px;
+}
+
+header.masthead {
+	background: url(../img/hero-1.jpg) no-repeat center center;
+}
+
+
+body {
+	overflow-x: hidden;
+}
+
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.logo-container {
+	text-align: center;	
+	margin: 44px 0;
+}

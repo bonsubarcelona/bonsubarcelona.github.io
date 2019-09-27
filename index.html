@@ -1,18 +1,315 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bonsu - La arquitectura del buen comer</title>
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+  </script>
+
+   <script>
+        $(document).ready(function(){
+       $("#Formulario").submit(function( event ){
+    event.preventDefault();
+
+    $.ajax({
+      type: 'POST',
+      url: 'php/contacto2.php',
+      data: $(this).serialize(),
+      success: function(data){
+        $("#respuesta").slideDown();
+        $("#respuesta").html(data);
+                $('#respuesta2').modal('show');
+                document.getElementById('Formulario').reset();
+      }
+    });
+
+    return false;
+  });
+});
+    </script>
+
 </head>
 
 <body>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img data-aos="fade-right" data-aos-duration="2000" id="logo-navbar" src="img/logo-3.png" alt=""></a>
+      <a data-aos="fade-left" data-aos-duration="2000" class="btn btn-primary" href="#">Estemos en contacto!</a>
+    </div>
+  </nav>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+  <!-- Masthead -->
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5" id="hero" data-aos="fade-in" data-aos-duration="3000" data-aos-once="true">Dentro del ámbito gastronómico es fundamental, además de qué comemos, cómo nos sentimos al hacerlo.</h1>
+        </div>
+       <!--  <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+         <form>
+           <div class="form-row">
+             <div class="col-12 col-md-9 mb-2 mb-md-0">
+               <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+             </div>
+             <div class="col-12 col-md-3">
+               <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+             </div>
+           </div>
+         </form>
+       </div> -->
+      </div>
+    </div>
+  </header>
 
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <h3 >Espacio amable</h3>
+            <p class="lead mb-0">Cada detalle forma parte de la experiencia del cliente y habla de
+la personalidad del lugar.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <h3>Pequeñas ideas</h3>
+            <p class="lead mb-0">Grandes negocios.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <h3>Puntos clave</h3>
+            <p class="lead mb-0">Harán de tu local un lugar memorable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+
+        <div data-aos="zoom-out-left" data-aos-duration="3000" class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/grilla-1.jpeg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2 data-aos="fade-in" data-aos-duration="2000">Armonía gastronómica</h2>
+          <p data-aos="fade-in" data-aos-duration="2500" class="lead mb-0">Las formas, los colores y las texturas generan un clima
+arquitectónico irrepetible, provocando en el cliente emociones y
+sentimientos que quedarán en su recuerdo y lo harán regresar.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div data-aos="zoom-out-right" data-aos-duration="3000"class="col-lg-6 text-white showcase-img" style="background-image: url('img/grilla-2.jpg');"></div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2 data-aos="fade-in" data-aos-duration="2000">Ideas con buen sabor</h2>
+          <p data-aos="fade-in" data-aos-duration="2500"class="lead mb-0">Te proponemos pequeños cambios que harán grande a tu local. Tus
+productos tendrán un valor agregado, mejorarán tus reseñas y se
+potenciará la identidad de tu producto.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div data-aos="zoom-out-left" data-aos-duration="3000" class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/grilla-3.jpg');"></div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2 data-aos="fade-in" data-aos-duration="2000">Ojo crítico</h2>
+          <p data-aos="fade-in" data-aos-duration="2500"class="lead mb-0">Haremos un análisis macro de tu local para mejorar la calidad de
+cada componente a través de un listado detallado para potenciar
+al máximo tu negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials text-center bg-light">
+    <div class="container">
+      <h2 data-aos="fade-in" data-aos-duration="2000" class="mb-5">Nosotros</h2>
+      <div class="row" style="position: relative; left: 180px;">
+    
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img data-aos="flip-left" data-aos-duration="2000" class="img-fluid rounded-circle mb-3" src="img/nosotros-pato.jpg" alt="">
+            <h5 data-aos="fade-in" data-aos-duration="2000">Patricio Rota</h5>
+            <p  data-aos="fade-in" data-aos-duration="2000"class="font-weight-light mb-0">Arquitecto</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+            <img data-aos="flip-left" data-aos-duration="2000" class="img-fluid rounded-circle mb-3" src="img/nosotros-agos.jpg" alt="">
+            <h5 data-aos="fade-in" data-aos-duration="2000">Agostina Noli</h5>
+            <p data-aos="fade-in" data-aos-duration="2000"class="font-weight-light mb-0">Arquitecta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+        <div class="container">
+          <div class="logo-container"><img data-aos="fade-down" data-aos-duration="2000" data-aos-delay="50" src="img/logo-2.png" alt=""></div>
+            <div class="container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d7889.40621095499!2d-70.23299216136742!3d8.624475075086659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d8.626995899999999!2d-70.2301559!5e0!3m2!1ses-419!2sve!4v1456756695234" style="border:0" allowfullscreen="" frameborder="0" height="250" width="100%"></iframe>
+            </div>
+            <strong>Contactenos</strong><br><strong>Oficina:</strong> 123456789
+            <hr>
+        </div>
+        <div class="container">
+            <form role="form" id="Formulario" action="../php/contacto2.php" method="POST">
+                <div class="form-group">
+                    <label class="control-label" for="Nombre">Nombres</label>
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Introduzca su nombre" required autofocus />
+                </div>            
+                <div class="form-group">
+                    <label class="control-label" for="Motivo">Motivo de Contacto</label>
+                    <select name="Motivo" class="form-control">
+                        <option value="Consulta General">Consulta General</option>
+                        <option value="Realizar Pedido">Realizar Pedido</option>
+                        <option value="Informe un problema">Informe un problema</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Empresa">Empresa</label>
+                    <input type="text" class="form-control" id="Empresa" name="Empresa" placeholder="Introduzca el nombre de su empresa" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Correo">Dirección de Correo Electrónico</label>
+                    <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Introduzca su correo electrónico" required />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="Mensaje">Mensaje</label>
+                    <textarea rows="5" cols="30" class="form-control" id="Mensaje" name="Mensaje" placeholder="Introduzca su mensaje" required ></textarea>
+                </div>
+                <div class="form-group">                
+                    <input type="submit" class="btn btn-primary" value="Enviar">
+                    <input type="reset" class="btn btn-default" value="Limpiar">                
+                </div>
+                <div id="respuesta" style="display: none;"></div>
+            </form>
+        </div>       
+    </div>
+</section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center">
+
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
