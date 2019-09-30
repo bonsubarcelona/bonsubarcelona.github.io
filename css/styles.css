@@ -1,6 +1,15 @@
+/* font converted using font-converter.net. thank you! */
 @font-face {
   font-family: "Herculanum";
-  src: url("../fonts/Herculanum.ttf");
+  src: url("../fonts/Herculanum.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/Herculanum.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Herculanum.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/Herculanum.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/Herculanum.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/Herculanum.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Herculanum.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
 }
 
 #logo-navbar {
@@ -12,6 +21,7 @@
     position: relative;
     width: 714px;
     font-family: "Herculanum", sans-serif;
+    font-size: 90px;
 }
 
 .btn-primary:hover {
@@ -56,4 +66,20 @@ div.linekdin {
     background-position: 50%;
     border-radius: 50%;
     background-size: 100% auto;
+}
+
+.card-title {
+    color: #3d511e !important;
+}
+
+.icon-screen-desktop:before {
+    color: #3d511e !important;
+}
+
+.icon-layers:before {
+    color: #3d511e !important;
+}
+
+.icon-check:before {
+    color: #3d511e !important;
 }
