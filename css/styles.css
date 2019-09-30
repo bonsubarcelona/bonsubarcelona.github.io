@@ -1,11 +1,17 @@
+@font-face {
+  font-family: "Herculanum";
+  src: url("../fonts/Herculanum.ttf");
+}
+
 #logo-navbar {
 	width: 104px;
 }
 
 #hero {
-	right: 157px;
+	right: 492px;
     position: relative;
-    width: 435px;
+    width: 714px;
+    font-family: "Herculanum", sans-serif;
 }
 
 .btn-primary:hover {
@@ -17,6 +23,7 @@
 
 header.masthead {
 	background: url(../img/hero-1.jpg) no-repeat center center;
+    zoom: 50%;
 }
 
 
@@ -38,4 +45,15 @@ body {
 .logo-container {
 	text-align: center;	
 	margin: 44px 0;
+}
+
+div.linekdin {
+     /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 100px;
+    width: 100px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
 }
