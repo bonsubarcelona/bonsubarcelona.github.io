@@ -11,7 +11,7 @@
 $cabeceras = "From: $Correo\n" //La persona que envia el correo
  . "Reply-To: $Correo\n";
 $asunto = "From: BONSUBARCELONA CONTACT FORM $Motivo\n"; //asunto aparecera en la bandeja del servidor de correo
-$email_to = "bonsubarcelona@gmail.com"; //cambiar por tu email
+$email_to = "fanapal.design@gmail.com"; //cambiar por tu email
 $contenido = "$Nombre ha enviado un mensaje desde el sitio web bonsubarcelona.github.io\n"
 . "\n"
 . "Nombre: $Nombre\n"
